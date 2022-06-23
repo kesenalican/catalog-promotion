@@ -1,0 +1,6 @@
+SELECT `oc_product`.`model`,`oc_product`.`price`, `oc_product_description`.`name`,`oc_product_image`.`image`
+FROM `oc_product`
+INNER JOIN `oc_product_description` ON `oc_product_description`.`product_id` = `oc_product`.`product_id`
+INNER JOIN `oc_product_image` ON `oc_product_image`.`product_id` =`oc_product`.`product_id`
+WHERE (`oc_product_description`.`language_id`= 1) &  (`oc_product_image`.`sort_order` =0) & (`oc_product`.`model` like '%1865MR%' )
+
